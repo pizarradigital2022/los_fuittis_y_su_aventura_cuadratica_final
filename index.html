@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Los Fruittis y su aventura cuadrática final</title>
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+  tex: {inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']]}
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+    margin:0;
+    font-family:'Trebuchet MS', sans-serif;
+    background: radial-gradient(circle, #ff99cc, #ffcc66);
+    color:#2d2d2d;
+    text-align:center;
+}
+
+/* estilo frutal */
+.aura {
+  animation: auraGlow 2s infinite alternate;
+}
+@keyframes auraGlow {
+  from { box-shadow: 0 0 10px #ff6699; }
+  to { box-shadow: 0 0 30px #66ff99; }
+}
+
+.screen{display:none; padding:20px;}
+.active{display:block;}
+
+.timer{
+    position:fixed;
+    top:10px;
+    right:20px;
+    font-size:22px;
+    background:#2d2d2d;
+    padding:10px;
+    border-radius:10px;
+    color:#66ffcc;
+}
+
+button{
+    background:#ff6699;
+    border:none;
+    padding:12px 20px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:8px;
+    margin:10px;
+}
+button:hover{background:#ff3366;}
+
+.math{
+    font-size:22px;
+    margin:20px;
+    background:rgba(255,255,255,0.6);
+    padding:15px;
+    border-radius:10px;
+}
+
+.hint{display:none; margin:10px; color:#cc0066;}
+
+.candado {
+  width: 420px;
+  height: 60px;
+  font-size: 22px;
+  text-align: center;
+  border-radius: 12px;
+  border: 3px solid #ff6699;
+  box-shadow: 0 0 15px #ff6699;
+}
+</style>
+</head>
+
+<body>
+
+<div class="timer" id="timer">Tiempo: --:--</div>
+
+<!-- INTRO -->
+<div id="intro" class="screen active aura">
+<h1>🍉 Los Fruittis y su aventura cuadrática final 🍉</h1>
+<p>Alcachofo y sus secuaces han capturado a los Fruittis. Resuelve las ecuaciones para liberarlos.</p>
+
+<img src="./resources/intro.png" width="500">
+
+<h2>Selecciona duración</h2>
+<button onclick="startGame(60)">60 min</button>
+<button onclick="startGame(90)">90 min</button>
+<hr>
+<p>Acceso profesor:</p>
+<input type="password" id="accesoProfe" placeholder="Introduce clave">
+<hr>
+<p>Autor: Joaquín Candañedo.<br><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="./resources/CC_BY_SA.png" alt="Creative Commons Reconocimiento - Compartir Igual"></a></p>  
+</div>
+
+<!-- PRUEBAS -->
+
+<div id="test1" class="screen">
+<h2>🍓 Prueba 1</h2>
+<img src="./resources/1.png" width="400">
+<div class="math">\[ \frac{1}{3}x^2 - 3 = 0 \]</div>
+<button onclick="showHint('h1')">Pista</button>
+<div id="h1" class="hint">Elimina la fracción</div>
+<button onclick="next('test2')">Continuar</button>
+</div>
+
+<div id="test2" class="screen">
+<h2>🐗 Prueba 2</h2>
+<img src="./resources/2.png" width="400">
+<div class="math">\[ x^2 - 9x = 0 \]</div>
+<button onclick="next('test3')">Continuar</button>
+</div>
+
+<div id="test3" class="screen">
+<h2>🦍 Prueba 3</h2>
+<img src="./resources/3.png" width="400">
+<div class="math">\[ x^2 - x - 12 = 0 \]</div>
+<button onclick="next('test4')">Continuar</button>
+</div>
+
+<div id="test4" class="screen">
+<h2>🍅 Prueba 4</h2>
+<img src="./resources/4.png" width="400">
+<div class="math">\[ x^2 - 8x + 16 = 0 \]</div>
+<button onclick="next('test5')">Continuar</button>
+</div>
+
+<div id="test5" class="screen">
+<h2>🌵 Prueba 5</h2>
+<img src="./resources/5.png" width="400">
+<div class="math">\[ x^2 + 2x + 5 = 0 \]</div>
+<button onclick="next('test6')">Continuar</button>
+</div>
+
+<div id="test6" class="screen">
+<h2>🧠 Prueba 6</h2>
+<img src="./resources/6.png" width="400">
+<div class="math">\[ \sqrt{x+9} = x - 3 \]</div>
+<button onclick="next('test7')">Continuar</button>
+</div>
+
+<div id="test7" class="screen">
+<h2>🦍 Prueba 7</h2>
+<img src="./resources/7.png" width="400">
+<div class="math">\[ x^2 - (k+2)x + k+1 = 0 \]</div>
+<button onclick="next('test8')">Continuar</button>
+</div>
+
+<div id="test8" class="screen">
+<h2>🐗 Prueba 8</h2>
+<img src="./resources/8.png" width="400">
+<div class="math">\[ x^4 - 13x^2 + 36 = 0 \]</div>
+<button onclick="next('test9')">Continuar</button>
+</div>
+
+<div id="test9" class="screen">
+<h2>🌪️ Prueba 9</h2>
+<img src="./resources/9.png" width="400">
+<div class="math">\[ x^4 - 5x^2 + 4 = 0 \]</div>
+<button onclick="next('test10')">Continuar</button>
+</div>
+
+<div id="test10" class="screen">
+<h2>🧃 Prueba 10</h2>
+<img src="./resources/10.png" width="400">
+<div class="math">\[ \frac{1}{2}x^2 - \frac{3}{2}x - 2 = 0 \]</div>
+<button onclick="next('lock')">Ir al candado</button>
+</div>
+
+<!-- CANDADO -->
+<div id="lock" class="screen">
+<h1>🔐 Candado final</h1>
+<p>Introduce los 10 dígitos en orden</p>
+<input id="password" class="candado">
+<br>
+<button onclick="checkPassword()">Desbloquear</button>
+</div>
+
+<!-- ÉXITO -->
+<div id="success" class="screen aura">
+<h1>🎉 ¡Fruittis salvados! 🎉</h1>
+<img src="./resources/success.png" width="500">
+</div>
+
+<!-- FRACASO -->
+<div id="fail" class="screen">
+<h1>💀 Los villanos ganaron 💀</h1>
+<button onclick="restart()">Reintentar</button>
+</div>
+
+<div id="panelProfesor" style="
+position:fixed;
+bottom:0;
+left:0;
+background:black;
+color:#00ffcc;
+padding:10px;
+font-size:14px;
+display:none;
+z-index:999;
+">
+<b>Panel profesor:</b><br>
+Prueba 1: 9<br>
+Prueba 2: 9<br>
+Prueba 3: 2<br>
+Prueba 4: 4<br>
+Prueba 5: 9<br>
+Prueba 6: 7<br>
+Prueba 7: 0<br>
+Prueba 8: 4<br>
+Prueba 9: 3<br>
+Prueba 10: 4<br>
+<br>
+Contraseña final: <b>9924970434</b>
+</div>
+
+  
+<script>
+let timeLeft;
+let timerInterval;
+let gameFinished=false;
+
+function startGame(minutes){
+    timeLeft = minutes*60;
+    gameFinished=false;
+    show('test1');
+    startTimer();
+}
+
+function startTimer(){
+    timerInterval=setInterval(()=>{
+        if(gameFinished) return;
+        timeLeft--;
+        let m=Math.floor(timeLeft/60);
+        let s=timeLeft%60;
+        document.getElementById("timer").innerText=`Tiempo: ${m}:${s.toString().padStart(2,'0')}`;
+        if(timeLeft<=0){
+            show('fail');
+            clearInterval(timerInterval);
+        }
+    },1000);
+}
+
+function show(id){
+    document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+
+function next(id){ show(id); }
+
+function checkPassword(){
+    let pass=document.getElementById("password").value.trim();
+    if(pass==="9924970434"){
+        gameFinished=true;
+        show('success');
+    }else{
+        show('fail');
+    }
+}
+
+function restart(){
+    clearInterval(timerInterval);
+    show('intro');
+    document.getElementById("timer").innerText="Tiempo: --:--";
+}
+
+function showHint(id){
+    document.getElementById(id).style.display="block";
+}
+
+document.getElementById("accesoProfe").addEventListener("input", function() {
+  const clave = this.value;
+  const panel = document.getElementById("panelProfesor");
+
+  if (clave === "PROFE") {
+    panel.style.display = "block";
+  } else {
+    panel.style.display = "none";
+  }
+});
+</script>
+
+</body>
+</html>
