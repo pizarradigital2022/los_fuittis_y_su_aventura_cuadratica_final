@@ -80,6 +80,35 @@ button:hover{background:#ff3366;}
   border: 3px solid #ff6699;
   box-shadow: 0 0 15px #ff6699;
 }
+
+.instrucciones {
+  font-size: 12px; /* MÁS PEQUEÑO */
+  line-height: 1.4;
+  color: #2d2d2d;
+  
+  background: linear-gradient(135deg, #ffe6f0, #e6fff2);
+  border: 3px solid #ff6699;
+  border-radius: 15px;
+  
+  padding: 10px 15px;
+  margin: 15px auto;
+  max-width: 600px;
+  
+  box-shadow: 0 0 10px rgba(255, 102, 153, 0.5);
+  
+  text-align: left;
+}
+
+/* Título */
+.instrucciones strong {
+  color: #cc0066;
+  font-size: 13px;
+}
+
+/* Opcional: aún más compacto */
+.instrucciones br {
+  margin-bottom: 4px;
+}
 </style>
 </head>
 
@@ -220,6 +249,19 @@ Cardo se ha topado con un espejo mágico que cambia las ecuaciones y las deforma
 <div id="lock" class="screen">
 <h1>🔐 Candado final 🔐</h1>
   <img src="./resources/candado.png" width="400"  class="borde-rosa" alt="Candado">
+  <p>Todos los villanos se han juntado </p>
+  <p class="instrucciones">
+Prueba 1: Producto de las soluciones en valor absoluto.<br>
+Prueba 2: La solución mayor.<br>
+Prueba 3: Producto → unidad.<br>
+Prueba 4: Raíz doble.<br>
+Prueba 5: Sin solución → 9.<br>
+Prueba 6: Solución válida.<br>
+Prueba 7: Valor del parámetro.<br>
+Prueba 8: Nº soluciones reales.<br>
+Prueba 9: Suma de positivas.<br>
+Prueba 10: Solución positiva.
+</p>
 <p>Introduce los 10 dígitos en orden</p>
 <input id="password" class="candado">
 <br>
@@ -239,7 +281,8 @@ Cardo se ha topado con un espejo mágico que cambia las ecuaciones y las deforma
 <h1>💀 Los villanos ganaron 💀</h1>
 <img src="./resources/fail.png" width="500"  class="borde-rosa" alt="Fracaso"><br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BpLqWK9uydw?si=gGHyZtpgx_oXbnAJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<button onclick="restart()">Reintentar</button>
+<br>
+  <button onclick="restart()">Reintentar</button>
 </div>
 
 <div id="panelProfesor" style="
