@@ -44,6 +44,11 @@ body{
     color:#66ffcc;
 }
 
+.borde-rosa {
+  border: 4px solid pink;      /* borde rosa */
+  border-radius: 12px;         /* opcional: esquinas redondeadas */
+}
+
 button{
     background:#ff6699;
     border:none;
@@ -87,7 +92,7 @@ button:hover{background:#ff3366;}
 <h1>🍉 Los Fruittis y su aventura cuadrática final 🍉</h1>
 <p>Alcachofo y sus secuaces han capturado a los Fruittis. Resuelve las ecuaciones para liberarlos.</p>
 
-<img src="./resources/intro.png" width="500">
+<img src="./resources/intro.png" alt="Introducción" width="500" class="borde-rosa">
 
 <h2>Selecciona duración</h2>
 <button onclick="startGame(60)">60 min</button>
@@ -107,7 +112,7 @@ button:hover{background:#ff3366;}
   Kumba ha logrado esconder una clave dentro de una antigua ecuación protegida por la magia de la selva Fruitti. Sin embargo, Alcachofo ha alterado los coeficientes para confundir a cualquiera que intente resolverla. Solo eliminando correctamente las fracciones y restaurando el equilibrio matemático podréis descubrir el secreto.<br>
 🍓 La fresa, como Kumba, es rica en vitamina C y antioxidantes, ayudando a reforzar las defensas y mantener la energía necesaria para afrontar cualquier desafío.
 </p>
-<img src="./resources/1.png" width="400">
+<img src="./resources/1.png" alt="Prueba 1" width="400" class="borde-rosa">
 <div class="math">\[ \frac{1}{3}x^2 - 3 = 0 \]</div>
 <button onclick="showHint('h1')">Pista</button>
 <div id="h1" class="hint">Elimina la fracción</div>
@@ -120,7 +125,7 @@ button:hover{background:#ff3366;}
   Los jabalíes enemigos de los Futittis han preparado una trampa matemática en mitad del camino. La ecuación parece sencilla, pero si no identificáis correctamente sus factores, quedaréis atrapados en su emboscada. Solo separando los elementos clave podréis escapar y continuar vuestro avance por la isla.<br>
   Los jabalíes se mueven en manadas organizadas, colaborando entre ellos para protegerse, buscar alimento y superar los desafíos del entorno, igual que un buen equipo que resuelve juntos cada reto.
 </p>
-<img src="./resources/2.png" width="400">
+<img src="./resources/2.png" width="400" class="borde-rosa" alt="Prueba 2">
 <div class="math">\[ x^2 - 9x = 0 \]</div>
 <button onclick="next('test3')">Continuar</button>
 </div>
@@ -130,7 +135,7 @@ button:hover{background:#ff3366;}
 <p>Gorilón bloquea el paso con un reto que requiere fuerza… pero no física, sino mental. La ecuación está diseñada para poner a prueba vuestra capacidad de análisis. Si encontráis sus soluciones ocultas, demostraréis que la inteligencia puede vencer incluso a la fuerza bruta.<br>
   Gorilón, como buen gorila, vive en grupo y coopera con los suyos, ya que los gorilas se organizan en familias donde se cuidan, se comunican y trabajan juntos para protegerse y salir adelante.
 </p>
-<img src="./resources/3.png" width="400">
+<img src="./resources/3.png" width="400" class="borde-rosa" alt="Prueba 3">
 <div class="math">\[ x^2 - x = 12 \]</div>
 <button onclick="next('test4')">Continuar</button>
 </div>
@@ -139,7 +144,7 @@ button:hover{background:#ff3366;}
 <h2>🍅 Prueba 4</h2>.
 <p>Monus ha creado un duplicador matemático que repite valores hasta el infinito, lo está utilizando para multiplicar tomates. Solo si identificáis correctamente la raíz única que estabiliza el sistema podréis desactivarlo.<br>
 🍅 El tomate, base de platos como el gazpacho y el salmorejo, es rico en licopeno, un potente antioxidante que protege el organismo y ayuda a mantener el corazón sano.</p>
-<img src="./resources/4.png" width="400">
+<img src="./resources/4.png" width="400" class="borde-rosa" alt="Prueba 4">
 <div class="math">\[ x^2 + 16 = 8x \]</div>
 <button onclick="next('test5')">Continuar</button>
 </div>
@@ -150,7 +155,7 @@ button:hover{background:#ff3366;}
   Alcachofo ha lanzado un hechizo aparentemente resoluble… pero algo no encaja. Esta ecuación es una ilusión diseñada para haceros perder el tiempo. Solo quienes comprendan cuándo no existe solución podrán romper el hechizo y avanzar.<br>
   Aunque el pirata Alcachofo es un villano de los Fruittis, las alcachofas, también llamadas alcauciles, son un alimento muy nutritivo que aporta fibra, vitaminas y antioxidantes, ayudando a cuidar la digestión y mantener el cuerpo sano.
 </p>
-<img src="./resources/5.png" width="400">
+<img src="./resources/5.png" width="400" class="borde-rosa" alt="Prueba 5">
 <div class="math">\[ x^2 + 2x + 5 = 0 \]</div>
 <button onclick="next('test6')">Continuar</button>
 </div>
@@ -160,7 +165,7 @@ button:hover{background:#ff3366;}
 <p>
 Cardo se ha topado con un espejo mágico que cambia las ecuaciones y las deforma. Lo ha usado con unas bellotas, que han quedado atrapadas dentro del espejo, y en su lugar han salido cacahuetes malvados. Algunas soluciones parecen correctas… pero en realidad son trampas. Tendréis que revisar bien cuáles son verdaderas y cuáles son falsas, o podríais quedaros atrapados en el espejo para siempre.<br>
   Las bellotas y los cacahuetes son alimentos muy energéticos y nutritivos, ricos en grasas saludables, proteínas y minerales, que ayudan a mantener la energía y el buen funcionamiento del organismo.</p>
-<img src="./resources/6.png" width="400">
+<img src="./resources/6.png" width="400" class="borde-rosa" alt="Prueba 6">
 <div class="math">\[ \sqrt{x+9} = x - 3 \]</div>
 <button onclick="next('test7')">Continuar</button>
 </div>
@@ -171,7 +176,7 @@ Cardo se ha topado con un espejo mágico que cambia las ecuaciones y las deforma
     Gorilón regresa con un desafío aún más complejo: una ecuación con un valor oculto. Solo si encontráis el parámetro correcto lograréis equilibrarla perfectamente. Este reto demuestra que, a veces, la clave no está en resolver… sino en entender la condición del problema equilibradamente.<br>
     Comer de forma equilibrada significa incluir frutas, verduras, proteínas y cereales en tu dieta para mantener tu cuerpo sano y con energía.
   </p>
-<img src="./resources/7.png" width="400">
+<img src="./resources/7.png" width="400" class="borde-rosa" alt="Prueba 7">
 <div class="math">\[ x^2 - (k+2)x + k+1 = 0 \]</div>
 <button onclick="next('test8')">Continuar</button>
 </div>
@@ -182,7 +187,7 @@ Cardo se ha topado con un espejo mágico que cambia las ecuaciones y las deforma
     Los jabalíes han colocado una trampa más sofisticada: una ecuación que parece imposible a primera vista. Solo quienes sepan transformarla adecuadamente podrán revelar sus soluciones ocultas. La clave está en cambiar la perspectiva.<br>
     Los jabalíes son animales salvajes muy inteligentes y fuertes, que viven en bosques y se adaptan fácilmente a distintos entornos.
   </p>
-<img src="./resources/8.png" width="400">
+<img src="./resources/8.png" width="400"  class="borde-rosa" alt="Prueba 8">
 <div class="math">\[ x^4 - 13x^2 + 36 = 0 \]</div>
 <button onclick="next('test9')">Continuar</button>
 </div>
@@ -192,7 +197,7 @@ Cardo se ha topado con un espejo mágico que cambia las ecuaciones y las deforma
   <p>Alcachofo se ha encontrado una barita mágica y con ella lanza su hechizo más poderoso. La ecuación parece caótica, pero en realidad sigue un patrón escondido. Si lográis descubrirlo, podréis deshacer su magia y acercaros a la liberación de los Fruittis.<br>
   Las alcachofas son una verdura muy saludable, rica en fibra y vitaminas, que ayuda a cuidar la digestión y se puede cocinar de muchas formas deliciosas.
   </p>
-<img src="./resources/9.png" width="400">
+<img src="./resources/9.png" width="400"  class="borde-rosa" alt="Prueba 9">
 <div class="math">\[ x^4 - 5x^2 + 4 = 0 \]</div>
 <button onclick="next('test10')">Continuar</button>
 </div>
@@ -204,7 +209,7 @@ Cardo se ha topado con un espejo mágico que cambia las ecuaciones y las deforma
 🥤 El gazpacho, rico en verduras frescas, aporta vitaminas, hidratación y minerales esenciales, ideal para mantener la concentración y el rendimiento mental.<br>
   🍍 Las piñas son una fruta muy beneficiosa, rica en vitaminas y antioxidantes, que ayudan a la digestión y aportan frescura y energía al cuerpo.
 </p>
-<img src="./resources/10.png" width="400">
+<img src="./resources/10.png" width="400"  class="borde-rosa" alt="Prueba 10">
 <div class="math">\[ \frac{1}{2}x^2 - \frac{3}{2}x - 2 = 0 \]</div>
 <button onclick="next('lock')">Ir al candado</button>
 </div>
@@ -212,7 +217,7 @@ Cardo se ha topado con un espejo mágico que cambia las ecuaciones y las deforma
 <!-- CANDADO -->
 <div id="lock" class="screen">
 <h1>🔐 Candado final</h1>
-  <img src="./resources/candado.png" width="400">
+  <img src="./resources/candado.png" width="400"  class="borde-rosa" alt="Candado">
 <p>Introduce los 10 dígitos en orden</p>
 <input id="password" class="candado">
 <br>
@@ -222,13 +227,13 @@ Cardo se ha topado con un espejo mágico que cambia las ecuaciones y las deforma
 <!-- ÉXITO -->
 <div id="success" class="screen aura">
 <h1>🎉 ¡Fruittis salvados! 🎉</h1>
-<img src="./resources/success.png" width="500">
+<img src="./resources/success.png" width="500"  class="borde-rosa" alt="Éxito">
 </div>
 
 <!-- FRACASO -->
 <div id="fail" class="screen">
 <h1>💀 Los villanos ganaron 💀</h1>
-<img src="./resources/fail.png" width="500">
+<img src="./resources/fail.png" width="500"  class="borde-rosa" alt="Fracaso">
 <button onclick="restart()">Reintentar</button>
 </div>
 
